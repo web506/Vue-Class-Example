@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>VUEJS Tutorial</title>
+    <script src="https://unpkg.com/vue"></script>
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div id="vue-app">
+        <h1>{{greet('Afternoon')}}</h1>
+        <a v-bind:href="website">Webmaster506</a>
+        <input type="text" v-bind:value="name">
+        <p>Job: {{job}}</p>
+        <p v-html="websiteTag"></p>
+        <button v-on:click="age++">add a Year</button>
+        <button v-on:click="age--">Substract a Year</button>
+        <p>Age: {{age}}</p>
+        <button v-on:click.once="add(1)">Add a Year</button>
+        <button v-on:click="substract(1)">Substract a Year</button>
+        <button v-on:dblclick="add(10)">Add 10 Years</button>
+        <button v-on:dblclick="substract(10)">Substract 10 Years</button>
+        <div id="canvas" v-on:mousemove="updateXY">{{x}} - {{y}}</div>
+        <a v-on:click.prevent="click" href="https://www.google.com">Can't go here</a>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
